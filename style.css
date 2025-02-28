@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+h1 {
+    color: #cc99ff;
+    text-shadow: 0 0 10px #9933cc;
+    animation: pulse 2s infinite;
+}
+
+/* Sections */
+section {
+    background-color: rgba(26, 26, 26, 0.7);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hover Effect */
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 0, 255, 0.5);
+}
+
+/* Animated Underline */
+section::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 4px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, #ff00ff, #0000ff);
+    transition: width 0.3s ease;
+}
+
+section:hover::after {
+    width: 100%;
+}
+
+/* Images */
+img {
+    max-width: 200px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(153, 51, 204, 0.5);
+}
+
+/* Project Images */
+.project-image {
+    max-width: 300px;
+    float: left;
+    margin-right: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(153, 51, 204, 0.3);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #111;
+    color: #eee;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { text-shadow: 0 0 10px #9933cc; }
+    50% { text-shadow: 0 0 20px #cc99ff; }
+    100% { text-shadow: 0 0 10px #9933cc; }
+}
+
+/* Clearfix */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
